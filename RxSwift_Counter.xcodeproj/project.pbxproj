@@ -89,12 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				E7B224B821F9F5E10094A1DB /* AppDelegate.swift */,
+				E7B224CE21F9FA310094A1DB /* ViewController.xib */,
 				E7B224BA21F9F5E10094A1DB /* ViewController.swift */,
 				E7B224D021F9FF9E0094A1DB /* ViewModel.swift */,
 				E7B224BF21F9F5E10094A1DB /* Assets.xcassets */,
 				E7B224C121F9F5E10094A1DB /* LaunchScreen.storyboard */,
 				E7B224C421F9F5E10094A1DB /* Info.plist */,
-				E7B224CE21F9FA310094A1DB /* ViewController.xib */,
 			);
 			path = RxSwift_Counter;
 			sourceTree = "<group>";

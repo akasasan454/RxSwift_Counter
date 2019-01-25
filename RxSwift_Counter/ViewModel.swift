@@ -26,21 +26,47 @@ protocol ViewModelType {
 
 class RxViewModel: ViewModelType {
     var outputs: ViewModelOutput?
-    
-    
+
+
     private let relay = BehaviorRelay<Int>(value: 0)
     private let initialCount = 0
     private let disposeBag = DisposeBag()
-    
+
     init() {
         self.outputs = self
         resetCount()
     }
     
     func setUp(input: ViewModelInput) {
-        input.countUpButton.subscribe(onNext: { [weak self] in
-            <#code#>
-        }
+        input.countUpButton
+            .subscribe(onNext: { [weak self] in
+                self?.incrementCount()
+            })
+            .disposed(by: disposeBag)
+        input.countDownButton
+            .subscribe(onNext: { [weak self] in
+                self?.decrementCount()
+            })
+            .disposed(by: disposeBag)
+        input.countResetButton
+            .subscribe(onNext: { [weak self] in
+                self?.resetCount()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func incrementCount() {
+        let count = relay.value + 1
+        relay.accept(count)
+    }
+    
+    private func decrementCount() {
+        let count = relay.value - 1
+        relay.accept(count)
+    }
+    
+    private func resetCount() {
+        relay.accept(initialCount)
     }
 }
 

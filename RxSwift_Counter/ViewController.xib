@@ -35,7 +35,7 @@
                     <state key="normal" title="カウントダウン"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX7-3E-EKM">
-                    <rect key="frame" x="182" y="160" width="11" height="21"/>
+                    <rect key="frame" x="124" y="160" width="117" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -49,7 +49,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="Igv-Y8-SiC"/>
-            <point key="canvasLocation" x="-105" y="195"/>
+            <point key="canvasLocation" x="-106.40000000000001" y="194.75262368815595"/>
         </view>
     </objects>
 </document>

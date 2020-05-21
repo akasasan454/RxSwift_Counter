@@ -6,76 +6,63 @@
 //  Copyright © 2019 test. All rights reserved.
 //
 
+import Unio
 import RxSwift
 import RxCocoa
 
-struct ViewModelInput {
-    let countUpButton: Observable<Void>
-    let countDownButton: Observable<Void>
-    let countResetButton: Observable<Void>
+
+protocol ViewStreamType: AnyObject {
+    var input: InputWrapper<ViewStream.Input> { get }
+    var output: OutputWrapper<ViewStream.Output> { get }
 }
 
-protocol ViewModelOutput {
-    var counterText: Driver<String?> { get }
-}
+final class ViewStream: UnioStream<ViewStream>, ViewStreamType {
+    
+    convenience init() {
+        self.init(input: Input(), state: State(), extra: Extra())
+    }
 
-protocol ViewModelType {
-    var outputs: ViewModelOutput? { get }
-    func setUp(input: ViewModelInput)
-}
+    struct Input: InputType {
+        let countUpEvent = PublishRelay<Void>()
+        let countDownEvent = PublishRelay<Void>()
+        let countResetEvent = PublishRelay<Void>()
+    }
 
-class RxViewModel: ViewModelType {
-    var outputs: ViewModelOutput?
-
-
-    private let relay = BehaviorRelay<Int>(value: 0)
-    private let initialCount = 0
-    private let disposeBag = DisposeBag()
-
-    init() {
-        self.outputs = self
-        resetCount()
+    struct Output: OutputType {
+        let counterText: Observable<String?>
     }
     
-    func setUp(input: ViewModelInput) {
-        input.countUpButton
-            .subscribe(onNext: { [weak self] in
-                self?.incrementCount()
-            })
+    struct State: StateType {
+        let counterValue = BehaviorRelay<Int>(value: 0)
+    }
+    
+    typealias Extra = NoExtra
+
+    static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
+
+        let state = dependency.state
+        let input = dependency.inputObservables
+        
+        let incrementCount = input.countUpEvent
+            .withLatestFrom(state.counterValue)
+            .map { $0 + 1 }
+
+        let decrementCount = input.countDownEvent
+            .withLatestFrom(state.counterValue)
+            .map { $0 - 1 }
+
+        let resetCount = input.countResetEvent
+            .map { _ in 0 }
+
+        Observable
+            .merge(
+                incrementCount,
+                decrementCount,
+                resetCount
+            )
+            .bind(to: state.counterValue)
             .disposed(by: disposeBag)
-        input.countDownButton
-            .subscribe(onNext: { [weak self] in
-                self?.decrementCount()
-            })
-            .disposed(by: disposeBag)
-        input.countResetButton
-            .subscribe(onNext: { [weak self] in
-                self?.resetCount()
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    private func incrementCount() {
-        let count = relay.value + 1
-        relay.accept(count)
-    }
-    
-    private func decrementCount() {
-        let count = relay.value - 1
-        relay.accept(count)
-    }
-    
-    private func resetCount() {
-        relay.accept(initialCount)
-    }
-}
 
-extension RxViewModel: ViewModelOutput {
-    var counterText: Driver<String?> {
-        return relay
-            .map { "\($0)" }
-            .asDriver(onErrorJustReturn: nil)
+        return Output(counterText: state.counterValue.map { "\($0)" })
     }
-    
-    
 }

@@ -1,21 +1,32 @@
 PODS:
-  - RxCocoa (4.3.1):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.3.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - Unio (0.10.0):
+    - RxRelay (~> 5.0)
+    - RxSwift (~> 5.0)
 
 DEPENDENCIES:
   - RxCocoa
   - RxSwift
+  - Unio
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RxCocoa
+    - RxRelay
     - RxSwift
+    - Unio
 
 SPEC CHECKSUMS:
-  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Unio: d34bbf35f9d5fa355b9d16ea4da9df9cc73fb6c7
 
-PODFILE CHECKSUM: 3c05ad48be5051c30a4af03515bba16f6c5d06c1
+PODFILE CHECKSUM: b942a05fc86c99d3d32a3ec003c42fefebd5c388
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

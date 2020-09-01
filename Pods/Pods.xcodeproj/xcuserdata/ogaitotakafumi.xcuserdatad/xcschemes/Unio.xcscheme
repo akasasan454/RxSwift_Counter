@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9E9808F5F35E5506EA4484579947D7CF"
+               BlueprintIdentifier = "213024231E84E1A8C4E801B993AF56E6"
                BlueprintName = "Unio"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Unio.framework">

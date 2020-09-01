@@ -1,32 +1,54 @@
 PODS:
+  - Alamofire (5.2.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
   - Unio (0.10.0):
     - RxRelay (~> 5.0)
     - RxSwift (~> 5.0)
 
 DEPENDENCIES:
+  - Moya/RxSwift
   - RxCocoa
   - RxSwift
+  - RxSwiftExt
   - Unio
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxSwiftExt
     - Unio
 
 SPEC CHECKSUMS:
+  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   Unio: d34bbf35f9d5fa355b9d16ea4da9df9cc73fb6c7
 
-PODFILE CHECKSUM: b942a05fc86c99d3d32a3ec003c42fefebd5c388
+PODFILE CHECKSUM: 1b26aab6c2f432c9a928eed48e5da90415f5caf7
 
 COCOAPODS: 1.6.0

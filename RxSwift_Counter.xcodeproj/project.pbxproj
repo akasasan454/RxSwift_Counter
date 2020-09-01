@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7F1DC7806D8A7FC192A5E046 /* Pods_RxSwift_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB189599FB9FD9674AB774 /* Pods_RxSwift_Counter.framework */; };
+		E78896F024FCDAB800EDEABA /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896EF24FCDAB800EDEABA /* RequestService.swift */; };
+		E78896F224FD12AE00EDEABA /* GitHubApiStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896F124FD12AE00EDEABA /* GitHubApiStream.swift */; };
+		E78896F724FE250400EDEABA /* Parameterizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896F624FE250400EDEABA /* Parameterizable.swift */; };
+		E78896F924FE258F00EDEABA /* NonParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896F824FE258F00EDEABA /* NonParameter.swift */; };
+		E78896FB24FE25A200EDEABA /* NonResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896FA24FE25A200EDEABA /* NonResponce.swift */; };
+		E78896FD24FE260200EDEABA /* RequestTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896FC24FE260200EDEABA /* RequestTargetType.swift */; };
+		E78896FF24FE266D00EDEABA /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78896FE24FE266D00EDEABA /* GitHubAPI.swift */; };
+		E788970224FE26C800EDEABA /* GetRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788970124FE26C800EDEABA /* GetRepositories.swift */; };
+		E788970B24FE2F7C00EDEABA /* GetRepositoriesParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788970A24FE2F7C00EDEABA /* GetRepositoriesParameter.swift */; };
 		E7B224B921F9F5E10094A1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B224B821F9F5E10094A1DB /* AppDelegate.swift */; };
 		E7B224BB21F9F5E10094A1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B224BA21F9F5E10094A1DB /* ViewController.swift */; };
 		E7B224C021F9F5E10094A1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B224BF21F9F5E10094A1DB /* Assets.xcassets */; };
@@ -15,12 +24,21 @@
 		E7B224CB21F9F8CE0094A1DB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B224CA21F9F8CE0094A1DB /* RxCocoa.framework */; };
 		E7B224CD21F9F8CE0094A1DB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B224CC21F9F8CE0094A1DB /* RxSwift.framework */; };
 		E7B224CF21F9FA310094A1DB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B224CE21F9FA310094A1DB /* ViewController.xib */; };
-		E7B224D121F9FF9E0094A1DB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B224D021F9FF9E0094A1DB /* ViewModel.swift */; };
+		E7B224D121F9FF9E0094A1DB /* ViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B224D021F9FF9E0094A1DB /* ViewStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85DB189599FB9FD9674AB774 /* Pods_RxSwift_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ABE976363450CC87966174 /* Pods-RxSwift_Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_Counter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_Counter/Pods-RxSwift_Counter.debug.xcconfig"; sourceTree = "<group>"; };
+		E78896EF24FCDAB800EDEABA /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		E78896F124FD12AE00EDEABA /* GitHubApiStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApiStream.swift; sourceTree = "<group>"; };
+		E78896F624FE250400EDEABA /* Parameterizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameterizable.swift; sourceTree = "<group>"; };
+		E78896F824FE258F00EDEABA /* NonParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonParameter.swift; sourceTree = "<group>"; };
+		E78896FA24FE25A200EDEABA /* NonResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonResponce.swift; sourceTree = "<group>"; };
+		E78896FC24FE260200EDEABA /* RequestTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTargetType.swift; sourceTree = "<group>"; };
+		E78896FE24FE266D00EDEABA /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		E788970124FE26C800EDEABA /* GetRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositories.swift; sourceTree = "<group>"; };
+		E788970A24FE2F7C00EDEABA /* GetRepositoriesParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesParameter.swift; sourceTree = "<group>"; };
 		E7B224B521F9F5E10094A1DB /* RxSwift_Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwift_Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B224B821F9F5E10094A1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7B224BA21F9F5E10094A1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +48,7 @@
 		E7B224CA21F9F8CE0094A1DB /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B224CC21F9F8CE0094A1DB /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B224CE21F9FA310094A1DB /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		E7B224D021F9FF9E0094A1DB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E7B224D021F9FF9E0094A1DB /* ViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStream.swift; sourceTree = "<group>"; };
 		FC048A011B7F680A8E00088C /* Pods-RxSwift_Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_Counter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_Counter/Pods-RxSwift_Counter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,10 +85,105 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E78896F324FE248600EDEABA /* Entitiy */ = {
+			isa = PBXGroup;
+			children = (
+				E788970A24FE2F7C00EDEABA /* GetRepositoriesParameter.swift */,
+			);
+			path = Entitiy;
+			sourceTree = "<group>";
+		};
+		E78896F424FE24C900EDEABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E78896F824FE258F00EDEABA /* NonParameter.swift */,
+				E78896FA24FE25A200EDEABA /* NonResponce.swift */,
+				E78896F524FE24DB00EDEABA /* HTTPRequest */,
+				E788970024FE267200EDEABA /* GitHubAPI */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E78896F524FE24DB00EDEABA /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E78896F624FE250400EDEABA /* Parameterizable.swift */,
+				E78896FC24FE260200EDEABA /* RequestTargetType.swift */,
+				E78896EF24FCDAB800EDEABA /* RequestService.swift */,
+			);
+			path = HTTPRequest;
+			sourceTree = "<group>";
+		};
+		E788970024FE267200EDEABA /* GitHubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E78896FE24FE266D00EDEABA /* GitHubAPI.swift */,
+				E788970124FE26C800EDEABA /* GetRepositories.swift */,
+			);
+			path = GitHubAPI;
+			sourceTree = "<group>";
+		};
+		E788970324FE2DCF00EDEABA /* APIStream */ = {
+			isa = PBXGroup;
+			children = (
+				E78896F124FD12AE00EDEABA /* GitHubApiStream.swift */,
+			);
+			path = APIStream;
+			sourceTree = "<group>";
+		};
+		E788970424FE2DE800EDEABA /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				E788970524FE2E0F00EDEABA /* ViewStream */,
+				E788970324FE2DCF00EDEABA /* APIStream */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		E788970524FE2E0F00EDEABA /* ViewStream */ = {
+			isa = PBXGroup;
+			children = (
+				E7B224D021F9FF9E0094A1DB /* ViewStream.swift */,
+			);
+			path = ViewStream;
+			sourceTree = "<group>";
+		};
+		E788970624FE2E3800EDEABA /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				E7B224C121F9F5E10094A1DB /* LaunchScreen.storyboard */,
+				E7B224CE21F9FA310094A1DB /* ViewController.xib */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		E788970724FE2E4700EDEABA /* ViewContoroller */ = {
+			isa = PBXGroup;
+			children = (
+				E7B224BA21F9F5E10094A1DB /* ViewController.swift */,
+			);
+			path = ViewContoroller;
+			sourceTree = "<group>";
+		};
+		E788970824FE2EAF00EDEABA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E788970924FE2EFB00EDEABA /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
 		E7B224AC21F9F5E10094A1DB = {
 			isa = PBXGroup;
 			children = (
 				E7B224B721F9F5E10094A1DB /* RxSwift_Counter */,
+				E7B224C421F9F5E10094A1DB /* Info.plist */,
 				E7B224B621F9F5E10094A1DB /* Products */,
 				897991B5C560F4482969B6B8 /* Pods */,
 				69E68AEB33E55F49B0540F00 /* Frameworks */,
@@ -89,12 +202,14 @@
 			isa = PBXGroup;
 			children = (
 				E7B224B821F9F5E10094A1DB /* AppDelegate.swift */,
-				E7B224CE21F9FA310094A1DB /* ViewController.xib */,
-				E7B224BA21F9F5E10094A1DB /* ViewController.swift */,
-				E7B224D021F9FF9E0094A1DB /* ViewModel.swift */,
+				E788970624FE2E3800EDEABA /* UserInterface */,
+				E788970724FE2E4700EDEABA /* ViewContoroller */,
+				E788970824FE2EAF00EDEABA /* View */,
+				E788970424FE2DE800EDEABA /* Stream */,
+				E78896F424FE24C900EDEABA /* Model */,
+				E78896F324FE248600EDEABA /* Entitiy */,
+				E788970924FE2EFB00EDEABA /* SupportFile */,
 				E7B224BF21F9F5E10094A1DB /* Assets.xcassets */,
-				E7B224C121F9F5E10094A1DB /* LaunchScreen.storyboard */,
-				E7B224C421F9F5E10094A1DB /* Info.plist */,
 			);
 			path = RxSwift_Counter;
 			sourceTree = "<group>";
@@ -177,18 +292,24 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RxSwift_Counter/Pods-RxSwift_Counter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/Unio/Unio.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unio.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,8 +342,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78896F724FE250400EDEABA /* Parameterizable.swift in Sources */,
+				E78896F024FCDAB800EDEABA /* RequestService.swift in Sources */,
 				E7B224BB21F9F5E10094A1DB /* ViewController.swift in Sources */,
-				E7B224D121F9FF9E0094A1DB /* ViewModel.swift in Sources */,
+				E788970B24FE2F7C00EDEABA /* GetRepositoriesParameter.swift in Sources */,
+				E788970224FE26C800EDEABA /* GetRepositories.swift in Sources */,
+				E78896FF24FE266D00EDEABA /* GitHubAPI.swift in Sources */,
+				E78896FD24FE260200EDEABA /* RequestTargetType.swift in Sources */,
+				E78896F924FE258F00EDEABA /* NonParameter.swift in Sources */,
+				E7B224D121F9FF9E0094A1DB /* ViewStream.swift in Sources */,
+				E78896F224FD12AE00EDEABA /* GitHubApiStream.swift in Sources */,
+				E78896FB24FE25A200EDEABA /* NonResponce.swift in Sources */,
 				E7B224B921F9F5E10094A1DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCP7FZ8294;
-				INFOPLIST_FILE = RxSwift_Counter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCP7FZ8294;
-				INFOPLIST_FILE = RxSwift_Counter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

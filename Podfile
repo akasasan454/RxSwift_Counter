@@ -8,6 +8,8 @@ target 'RxSwift_Counter' do
   # Pods for RxSwift_Counter
   
   pod 'Unio'
+  pod 'Moya/RxSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxSwiftExt'
 end

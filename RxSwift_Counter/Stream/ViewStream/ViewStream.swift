@@ -45,8 +45,8 @@ final class ViewStream: UnioStream<ViewStream>, ViewStreamType {
         
         let text = Observable
             .merge(
-                apiStream.output.searchResponse.map { $0.items.first?.fullName },
-                apiStream.output.searchError.map { $0.localizedDescription }
+                apiStream.output.response.elements().map { $0.items.first?.fullName },
+                apiStream.output.response.errors().map { $0.localizedDescription }
             )
             .unwrap()
             .distinctUntilChanged()

@@ -14,10 +14,7 @@ import RxSwiftExt
 class ViewController: UIViewController {
 
     @IBOutlet weak var field: UITextField!
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var countUpButton: UIButton!
-    @IBOutlet weak var countDownButton: UIButton!
-    @IBOutlet weak var countResetButton: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     private let viewStream = ViewStream()
     private let disposeBag = DisposeBag()
@@ -31,14 +28,14 @@ class ViewController: UIViewController {
         let input = viewStream.input
         
         field.rx.text
-            .unwrap()
+            .filterEmpty()
             .bind(to: input.searchText)
             .disposed(by: disposeBag)
         
         let output = viewStream.output
         output.counterText
             .asDriver(onErrorDriveWith: .never())
-            .drive(countLabel.rx.text)
+            .drive(label.rx.text)
             .disposed(by: disposeBag)
     }
 }

@@ -26,13 +26,3 @@ extension GitHubAPI {
         }
     }
 }
-
-struct GetRepositoriesResponse : Decodable {
-    let items: [Repository]
-}
-
-struct Repository: Decodable, Equatable {
-    let name: String
-    let fullName: String
-    let htmlUrl: URL
-}

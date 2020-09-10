@@ -26,8 +26,7 @@ final class GitHubApiStream: UnioStream<GitHubApiStream>, GitHubApiStreamType {
     }
 
     struct Output: OutputType {
-        let searchResponse: Observable<GetRepositoriesResponse>
-        let searchError: Observable<Error>
+        let response: Observable<Event<GetRepositoriesResponse>>
     }
     
     struct Extra: ExtraType {
@@ -38,13 +37,12 @@ final class GitHubApiStream: UnioStream<GitHubApiStream>, GitHubApiStreamType {
         let searchText = dependency.inputObservables.searchText
         let requestService = dependency.extra.requestService
         
-        let responseEvent = searchText
+        let response = searchText
             .flatMapLatest { query -> Observable<Event<GetRepositoriesResponse>> in
                 return requestService.request(GitHubAPI.GetRepositories(.init(q: query)))
             }
             .share()
         
-        return Output(searchResponse: responseEvent.flatMap { $0.element.map(Observable.just) ?? .empty() },
-                      searchError: responseEvent.flatMap { $0.error.map(Observable.just) ?? .empty() })
+        return Output(response: response)
     }
 }
